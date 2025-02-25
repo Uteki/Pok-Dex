@@ -1,0 +1,27 @@
+header {
+    background-color: #313131;
+
+    & form {
+        display: flex;
+        background-color: red;
+        flex-direction: column;
+    }
+
+    & nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    & div {
+        color: #919191;
+        /*background-color: #ffffff;*/
+    }
+    & span {
+        color: #fffffD;
+    }
+}
+
+header > div {
+    background-color: #ffffff;
+}

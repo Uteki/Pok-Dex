@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+.margin_10 {
+    margin: 0 10px;
+}
+
+.d_none {
+    display: none;
+}
+
+.d_scroll {
+    height: 100%;
+    overflow: hidden;
+}
+
+.d_unset {
+    display: unset !important;
+}

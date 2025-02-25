@@ -1,0 +1,10 @@
+@import url(./styles/default.css);
+
+@import url(./styles/header.css);
+@import url(./styles/main.css);
+@import url(./styles/footer.css);
+
+
+/* BOOTSTRAP */
+
+@import url(./node_modules/bootstrap/dist/css/bootstrap.min.css);

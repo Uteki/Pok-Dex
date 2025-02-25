@@ -6,14 +6,56 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pok-dex</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
 
     <link rel="stylesheet" href="style.css">
 
     <script src="script.js"></script>
 </head>
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+        <div>
+            <h1>Pokédex</h1>
+        </div>
+
+        <nav>
+            <p>Suche nach einem Pokémon mit seiner Nummer oder seinem Namen.</p>
+
+            <form role="search" aria-label="Pok-dex-Suche">
+                <h2>Suche nach Name oder Nummer</h2>
+                <div>
+                    <label for="filter">Suchfeld:</label>
+                    <input type="search" id="filter" name="search" placeholder="Name oder Nummer eingeben">
+                    <button type="submit" class="btn-primary">🔍</button>
+                </div>
+            </form>
+        </nav>
+    </header>
+
+    <main>
+        <button>Zufall</button>
+        <button>Sortieren</button>
+        <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <mask id="cutout">
+                    <rect width="100%" height="100%" fill="white"/>
+                    <rect x="10" y="96" width="180" height="8" fill="black"/>
+                    <circle cx="100" cy="100" r="20" fill="black"/>
+                </mask>
+            </defs>
+
+            <circle cx="100" cy="100" r="90" fill="black" mask="url(#cutout)"/>
+
+            <circle cx="100" cy="100" r="10" fill="black"/>
+        </svg>
+        <button>Mehr laden</button>
+    </main>
+
+    <footer>
+        <div>
+            <img src="./assets/img/logo_freelanie.png" alt="Freelanie Logo">
+        </div>
+        <p>Copyright © 2024 All Rights Reserved</p>
+    </footer>
 </body>
 </html>
