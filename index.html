@@ -10,31 +10,47 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <header>
         <div>
-            <h1>Pokédex</h1>
+            <h1>Pok-dex</h1>
         </div>
 
         <nav>
-            <p>Suche nach einem Pokémon mit seiner Nummer oder seinem Namen.</p>
+            <blockquote class="blockquote">
+                <p>"Dies ist ein Beispiel für ein Zitat in Bootstrap."</p>
+            </blockquote>
 
-            <form role="search" aria-label="Pok-dex-Suche">
+            <form role="search" aria-label="Pokédex-Suche">
                 <h2>Suche nach Name oder Nummer</h2>
-                <div>
-                    <label for="filter">Suchfeld:</label>
-                    <input type="search" id="filter" name="search" placeholder="Name oder Nummer eingeben">
-                    <button type="submit" class="btn-primary">🔍</button>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Name oder Nummer eingeben"
+                           aria-label="Pokémon-Suche" aria-describedby="button-addon1">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit" id="button-addon1">🔍</button>
+                    </div>
                 </div>
             </form>
         </nav>
     </header>
 
     <main>
-        <button>Zufall</button>
-        <button>Sortieren</button>
+        <button class="btn btn-primary">🎲 Zufallsgenerator</button>
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Kleinste Nummer
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item" type="button">Größte Nummer</button>
+                <button class="dropdown-item" type="button">Von A bis Z</button>
+                <button class="dropdown-item" type="button">Von Z bis A</button>
+            </div>
+        </div>
+
         <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <mask id="cutout">
@@ -48,7 +64,9 @@
 
             <circle cx="100" cy="100" r="10" fill="black"/>
         </svg>
-        <button>Mehr laden</button>
+
+        <output style="background-color: #66a0d1;height: 20rem; width: 100%"></output>
+        <button class="btn btn-primary">Mehr Poke-de-X laden</button>
     </main>
 
     <footer>
