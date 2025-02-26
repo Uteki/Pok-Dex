@@ -30,7 +30,7 @@
                     <input type="text" class="form-control" placeholder="Name oder Nummer eingeben"
                            aria-label="Pokémon-Suche" aria-describedby="button-addon1">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="submit" id="button-addon1">🔍</button>
+                        <button class="btn btn-outline-secondary" type="submit" id="button-addon1"><img src="assets/svg/m_glass.svg"></button>
                     </div>
                 </div>
             </form>
@@ -38,34 +38,25 @@
     </header>
 
     <main>
-        <button class="btn btn-primary">🎲 Zufallsgenerator</button>
+        <button class="btn btn-primary"><img src="assets/svg/shuffle.svg"> Zufallsgenerator</button>
 
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Kleinste Nummer
+                <img src="assets/svg/dexball.svg" alt="Dexball">
+                <span>Kleinste Nummer</span>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item" type="button">Kleinste Nummer</button>
                 <button class="dropdown-item" type="button">Größte Nummer</button>
                 <button class="dropdown-item" type="button">Von A bis Z</button>
                 <button class="dropdown-item" type="button">Von Z bis A</button>
             </div>
         </div>
 
-        <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <mask id="cutout">
-                    <rect width="100%" height="100%" fill="white"/>
-                    <rect x="10" y="96" width="180" height="8" fill="black"/>
-                    <circle cx="100" cy="100" r="20" fill="black"/>
-                </mask>
-            </defs>
+        <output style="background-color: #66a0d1;height: 20rem; width: 100%">
 
-            <circle cx="100" cy="100" r="90" fill="black" mask="url(#cutout)"/>
+        </output>
 
-            <circle cx="100" cy="100" r="10" fill="black"/>
-        </svg>
-
-        <output style="background-color: #66a0d1;height: 20rem; width: 100%"></output>
         <button class="btn btn-primary">Mehr Poke-de-X laden</button>
     </main>
 
