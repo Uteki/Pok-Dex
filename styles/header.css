@@ -1,5 +1,23 @@
-header {
+figure {
+    margin: 0;
+    background: white;
+}
 
+figure img {
+    width: 100px;
+}
+
+figcaption {
+    color: #919191;
+    font-size: 30px;
+}
+
+header {
+    background-image: url("../assets/img/background.jpg");
+
+    & section:nth-child(2) {
+        background-color: #313131;
+    }
     & form {
         display: flex;
         flex-direction: column;
@@ -24,4 +42,8 @@ header {
 
 header > div {
     /*background-color: #ffffff;*/
+}
+
+.input-group-append button {
+    background: #ffb155;
 }

@@ -15,49 +15,58 @@
 </head>
 <body>
     <header>
-        <div>
-            <h1>Pok-dex</h1>
-        </div>
+        <section>
+            <figure class="w-75 mx-auto d-flex align-items-center">
+                <img src="./assets/svg/pok.svg" alt="Pok-dex Logo">
+                <figcaption class="ms-1">Pok-dex</figcaption>
+            </figure>
+        </section>
 
-        <nav>
-            <blockquote class="blockquote">
-                <p>"Dies ist ein Beispiel für ein Zitat in Bootstrap."</p>
-            </blockquote>
+        <section>
+            <nav class="w-75 mx-auto">
+                <blockquote class="blockquote">
+                    <p>"Dies ist ein Beispiel für ein Zitat in Bootstrap."</p>
+                </blockquote>
 
-            <form role="search" aria-label="Pokédex-Suche">
-                <h2>Suche nach Name oder Nummer</h2>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Name oder Nummer eingeben"
-                           aria-label="Pokémon-Suche" aria-describedby="button-addon1">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="submit" id="button-addon1"><img src="assets/svg/m_glass.svg"></button>
+                <form role="search" aria-label="Pokédex-Suche">
+                    <h2>Suche nach Name oder Nummer</h2>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Name oder Nummer eingeben"
+                               aria-label="Pokémon-Suche" aria-describedby="button-addon1">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit" id="button-addon1"><img class="icon" src="assets/svg/m_glass.svg" alt="Lupe"></button>
+                        </div>
                     </div>
-                </div>
-            </form>
-        </nav>
+                </form>
+            </nav>
+        </section>
     </header>
 
     <main>
-        <button class="btn btn-primary"><img src="assets/svg/shuffle.svg"> Zufallsgenerator</button>
+        <section class="w-75 mx-auto d-flex align-items-center flex-column">
+            <aside class="d-flex justify-content-between w-100">
+                <button class="btn btn-primary"><img class="icon" src="assets/svg/shuffle.svg" alt="Pfeile"> Zufallsgenerator</button>
 
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="assets/svg/dexball.svg" alt="Dexball">
-                <span>Kleinste Nummer</span>
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <button class="dropdown-item" type="button">Kleinste Nummer</button>
-                <button class="dropdown-item" type="button">Größte Nummer</button>
-                <button class="dropdown-item" type="button">Von A bis Z</button>
-                <button class="dropdown-item" type="button">Von Z bis A</button>
-            </div>
-        </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="icon" src="assets/svg/dexball.svg" alt="Dexball">
+                        <span>Kleinste Nummer</span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button">Kleinste Nummer</button>
+                        <button class="dropdown-item" type="button">Größte Nummer</button>
+                        <button class="dropdown-item" type="button">Von A bis Z</button>
+                        <button class="dropdown-item" type="button">Von Z bis A</button>
+                    </div>
+                </div>
+            </aside>
 
-        <output style="background-color: #66a0d1;height: 20rem; width: 100%">
+            <output style="background-color: #66a0d1;height: 20rem; width: 100%">
+                <template id="template"></template>
+            </output>
 
-        </output>
-
-        <button class="btn btn-primary">Mehr Poke-de-X laden</button>
+            <button class="btn btn-primary">Mehr Poke-de-X laden</button>
+        </section>
     </main>
 
     <footer>
