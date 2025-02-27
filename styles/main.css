@@ -7,4 +7,9 @@ main section {
 }
 
 aside {
+    margin: 40px 0;
+}
+
+output {
+    height: calc(100vh - 620px);
 }

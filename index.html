@@ -16,24 +16,25 @@
 <body>
     <header>
         <section>
-            <figure class="w-75 mx-auto d-flex align-items-center">
+            <figure class="m_width w-75 mx-auto d-flex align-items-center">
                 <img src="./assets/svg/pok.svg" alt="Pok-dex Logo">
                 <figcaption class="ms-1">Pok-dex</figcaption>
             </figure>
         </section>
 
         <section>
-            <nav class="w-75 mx-auto">
-                <blockquote class="blockquote">
-                    <p>"Dies ist ein Beispiel für ein Zitat in Bootstrap."</p>
+            <nav class="m_width w-75 mx-auto ps-2 pe-2 row">
+                <blockquote class="blockquote col">
+                    <p>„Es geht nicht darum, wer du bist, sondern was du mit deinem Leben machst."</p>
                 </blockquote>
 
-                <form role="search" aria-label="Pokédex-Suche">
-                    <h2>Suche nach Name oder Nummer</h2>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Name oder Nummer eingeben"
-                               aria-label="Pokémon-Suche" aria-describedby="button-addon1">
-                        <div class="input-group-append">
+                <div class="col-1"></div>
+
+                <form role="search" aria-label="Dexmon-Suche" class="align-items-end col">
+                    <h2>Name oder Nummer</h2>
+                    <div class="input-group mb-3 col">
+                        <input name="cool" type="text" class="form-control" placeholder="Dexmon suchen" aria-label="Dexmon-Suche" aria-describedby="button-addon1">
+                        <div class="ms-3 input-group-append">
                             <button class="btn btn-outline-secondary" type="submit" id="button-addon1"><img class="icon" src="assets/svg/m_glass.svg" alt="Lupe"></button>
                         </div>
                     </div>
@@ -43,11 +44,12 @@
     </header>
 
     <main>
-        <section class="w-75 mx-auto d-flex align-items-center flex-column">
+        <section class="m_width ps-4 pe-4 w-75 mx-auto d-flex align-items-center flex-column">
             <aside class="d-flex justify-content-between w-100">
                 <button class="btn btn-primary"><img class="icon" src="assets/svg/shuffle.svg" alt="Pfeile"> Zufallsgenerator</button>
 
                 <div class="dropdown">
+                    <label for="dropdownMenu2">Sortieren nach</label>
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <img class="icon" src="assets/svg/dexball.svg" alt="Dexball">
                         <span>Kleinste Nummer</span>
@@ -61,11 +63,10 @@
                 </div>
             </aside>
 
-            <output style="background-color: #66a0d1;height: 20rem; width: 100%">
-                <template id="template"></template>
+            <output>
             </output>
 
-            <button class="btn btn-primary">Mehr Poke-de-X laden</button>
+            <button id="load" class="btn btn-primary">Mehr Poke-de-X laden</button>
         </section>
     </main>
 

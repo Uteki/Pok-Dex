@@ -8,6 +8,14 @@ a {
     text-decoration: none;
 }
 
+button {
+    height: 40px;
+}
+
+.m_width {
+    max-width: 1440px;
+}
+
 .margin_10 {
     margin: 0 10px;
 }
