@@ -3,7 +3,7 @@ main {
 }
 
 main section {
-    background: white;
+    background: #ffffff;
 }
 
 aside {
@@ -11,5 +11,38 @@ aside {
 }
 
 output {
-    height: calc(100vh - 620px);
+    min-height: calc(100vh - 620px);
+}
+
+.dropdown-toggle {
+    width: 185px;
+}
+
+.dropdown {
+    & label {
+        color: #919191;
+        font-size: 20px;
+        margin-right: 10px;
+    }
+}
+
+.dropdown-menu {
+    background: #b6b6b6;
+    border: none;
+    padding: 0;
+
+    & button {
+        color: #ffffff;
+        width: 185px;
+
+        &:hover {
+            color: #ffffff;
+            background: #373c40;
+            border-radius: 0.375rem;
+        }
+    }
+}
+
+.dropdown-item {
+    padding: 0.5rem 2rem;
 }

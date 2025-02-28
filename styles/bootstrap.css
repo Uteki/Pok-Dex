@@ -5,10 +5,22 @@
     border: none;
 
     &:hover {
-        background-color: #5c9bd1;
+        background-color: #308ad5;
+    }
+
+    &:active {
+        background-color: #66a0d1 !important;
     }
 }
 
 .btn-secondary {
     background-color: #616970;
+
+    &:hover {
+        background-color: #373c40;
+    }
+
+    &:active {
+        background-color: #616970 !important;
+    }
 }
