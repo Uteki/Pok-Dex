@@ -1,15 +1,4 @@
 @media (max-width: 734px) {
-    .dropdown {
-        & label {
-            display: none;
-        }
-    }
-
-    .input-group input {
-        font-size: calc(1rem - 4px) !important;
-    }
-
-
     p {
         font-size: calc(1.25rem - 4px);
     }
@@ -22,35 +11,40 @@
         font-size: calc(1rem - 4px) !important;
     }
 
-    .dropdown-toggle {
-        width: unset;
-    }
+    .dropdown {
+        & label {
+            display: none;
+        }
 
-    .dropdown-menu {
-        --bs-dropdown-min-width : unset;
-        & button {
-            width: 151px;
-            font-size: calc(1rem - 4px) !important;
+        & .dropdown-toggle {
+            width: unset;
+        }
+
+        .dropdown-menu {
+            --bs-dropdown-min-width : unset;
+
+            & button {
+                width: 151px;
+                font-size: calc(1rem - 4px) !important;
+            }
+            & .dropdown-item {
+                padding: 0.25rem 1rem;
+            }
         }
     }
 
-    .dropdown-item {
-        padding: 0.25rem 1rem;
-
+    .input-group input {
+        font-size: calc(1rem - 4px) !important;
     }
 }
 
 
 @media (max-width: 594px) {
-    .ps-2, .pe-2 {
-        padding: 0 20px !important;
-    }
-
     form {
         padding: 0 !important;
-    }
-    form h2 {
-        display: none;
+        & h2 {
+            display: none;
+        }
     }
 
     nav {
@@ -65,6 +59,10 @@
     .row {
         flex-wrap: unset;
     }
+
+    .ps-2, .pe-2 {
+        padding: 0 20px !important;
+    }
 }
 
 @media (max-width: 529px) {
@@ -72,14 +70,9 @@
         margin: 0 !important;
     }
 
-    .row > * {
-        max-width: 20rem !important;
-    }
-
     blockquote {
         text-align: center;
     }
-
 
     figure {
         margin: 0 !important;
@@ -87,6 +80,10 @@
 
     .w-75 {
         width: 100% !important;
+    }
+
+    .row > * {
+        max-width: 20rem !important;
     }
 }
 
@@ -113,11 +110,11 @@
         }
     }
 
-    #dropdownMenu2 {
-        margin-top: 15px;
-    }
-
     #load {
         width: 150px;
+    }
+
+    #dropdownMenu2 {
+        margin-top: 15px;
     }
 }

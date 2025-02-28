@@ -1,21 +1,17 @@
 main {
     background-image: url("../assets/img/background.jpg");
-}
 
-main section {
-    background: #ffffff;
-}
+    & section {
+        background: #ffffff;
 
-aside {
-    margin: 40px 0;
-}
+        & aside {
+            margin: 40px 0;
+        }
 
-output {
-    min-height: calc(100vh - 620px);
-}
-
-.dropdown-toggle {
-    width: 185px;
+        & output {
+            min-height: calc(100vh - 620px);
+        }
+    }
 }
 
 .dropdown {
@@ -24,25 +20,29 @@ output {
         font-size: 20px;
         margin-right: 10px;
     }
-}
 
-.dropdown-menu {
-    background: #b6b6b6;
-    border: none;
-    padding: 0;
+    & .dropdown-menu {
+        background: #b6b6b6;
+        border: none;
+        padding: 0;
 
-    & button {
-        color: #ffffff;
-        width: 185px;
-
-        &:hover {
+        & button {
             color: #ffffff;
-            background: #373c40;
-            border-radius: 0.375rem;
+            width: 185px;
+
+            &:hover {
+                color: #ffffff;
+                background: #373c40;
+                border-radius: 0.375rem;
+            }
+        }
+
+        & .dropdown-toggle {
+            width: 185px;
+        }
+
+        & .dropdown-item {
+            padding: 0.5rem 2rem;
         }
     }
-}
-
-.dropdown-item {
-    padding: 0.5rem 2rem;
 }
