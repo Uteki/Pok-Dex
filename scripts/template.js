@@ -1,11 +1,11 @@
-function dexmonTemplate(a, b, c, d) {
+function monsterTemplate(id, name, image, types) {
     return `
-    <article style="background-color: red" onclick="" id="${c}">
-        <img style="width: 20px" src=${b} alt="${a}">
-        <span>Nr. ${calcNr(c)}</span>
-        <h1>${a}</h1>
+    <article style="background-color: red" onclick="" id="${id}">
+        <img style="width: 20px" src=${image} alt="${name}">
+        <span>Nr. ${calcNr(id)}</span>
+        <h1>${name}</h1>
         <ul>
-            ${d}
+            ${types}
         </ul>
     </article>
     `
