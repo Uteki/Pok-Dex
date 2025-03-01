@@ -11,9 +11,12 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="./script.js"></script>
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/maths.js"></script>
+    <script src="./scripts/template.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
+<body onload="init()">
     <header>
         <section>
             <figure class="m_width w-75 mx-auto d-flex align-items-center">
@@ -46,7 +49,7 @@
     <main>
         <section class="m_width ps-4 pe-4 w-75 mx-auto d-flex align-items-center flex-column">
             <aside class="d-flex justify-content-between w-100">
-                <button class="btn btn-primary"><img class="icon main-icon" src="assets/svg/shuffle.svg" alt="Pfeile"> Zufallsgenerator</button>
+                <button class="btn btn-primary" onclick="shuffleNext()"><img class="icon main-icon" src="assets/svg/shuffle.svg" alt="Pfeile"> Zufallsgenerator</button>
 
                 <div class="dropdown">
                     <label for="dropdownMenu2">Sortieren nach</label>
@@ -55,7 +58,7 @@
                         <span>Kleinste Nummer</span>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <button class="dropdown-item" type="button">Kleinste Nummer</button>
+                        <button class="dropdown-item" type="button" onclick="fetcher()">Kleinste Nummer</button>
                         <button class="dropdown-item" type="button">Größte Nummer</button>
                         <button class="dropdown-item" type="button">Von A bis Z</button>
                         <button class="dropdown-item" type="button">Von Z bis A</button>
@@ -64,9 +67,10 @@
             </aside>
 
             <output>
+                <!--Dex-Pok-->
             </output>
 
-            <button id="load" class="btn btn-primary">Mehr Dexmon laden</button>
+            <button id="load" class="btn btn-primary" onclick="loadNext()">Mehr Dexmon laden</button>
         </section>
     </main>
 

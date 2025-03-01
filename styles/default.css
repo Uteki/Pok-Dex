@@ -8,8 +8,17 @@ a {
     text-decoration: none;
 }
 
+ul {
+    display: flex;
+    padding: 0;
+}
+
 button {
     height: 40px;
+}
+
+li::marker {
+    content: "";
 }
 
 .m_width {
