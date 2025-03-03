@@ -49,7 +49,7 @@
     <main>
         <section class="m_width ps-4 pe-4 w-75 mx-auto d-flex align-items-center flex-column">
             <aside class="d-flex justify-content-between w-100">
-                <button class="btn btn-primary" onclick="shuffleNext()"><img class="icon main-icon" src="assets/svg/shuffle.svg" alt="Pfeile"> Zufallsgenerator</button>
+                <button id="shuffle" class="btn btn-primary" onclick="shuffleNext()"><img class="icon main-icon" src="assets/svg/shuffle.svg" alt="Pfeile"> Zufallsgenerator</button>
 
                 <div class="dropdown">
                     <label for="dropdownMenu2">Sortieren nach</label>
@@ -58,10 +58,10 @@
                         <span>Kleinste Nummer</span>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <button class="dropdown-item" type="button" onclick="fetcher()">Kleinste Nummer</button>
-                        <button class="dropdown-item" type="button">Größte Nummer</button>
-                        <button class="dropdown-item" type="button">Von A bis Z</button>
-                        <button class="dropdown-item" type="button">Von Z bis A</button>
+                        <button id="low" class="dropdown-item" type="button" onclick="fetchEm()">Kleinste Nummer</button>
+                        <button id="high" class="dropdown-item" type="button" onclick="highNext()">Größte Nummer</button>
+                        <button id="ascending" class="dropdown-item" type="button" onclick="azNext(ascending)">Von A bis Z</button>
+                        <button id="descending" class="dropdown-item" type="button" onclick="azNext(descending)">Von Z bis A</button>
                     </div>
                 </div>
             </aside>
