@@ -10,6 +10,21 @@ function calcNr(num) {
     return num.toString().padStart(4, '0');
 }
 
+function errMsg(query){
+    query.placeholder = "Bitte 3 Buchstaben";
+    query.value = "";
+}
+
+function isNumber(num){
+    return Number(num) === num;
+}
+
+function checkLoad(a) {
+    a === ascending
+        ? (() =>  {if (loader !== "A/Z") clear(); change('Von A bis Z', "A/Z")})()
+        : (() =>  {if (loader !== "Z/A") clear(); change('Von Z bis A', "Z/A")})()
+}
+
 function change(a, b) {
     document.querySelector("#dropdownMenu2 span").innerText = `${a}`;
     loader = b;
@@ -35,10 +50,4 @@ function descending (a, b) {
         return 1;
     }
     return 0;
-}
-
-function checkLoad(a) {
-    a === ascending
-        ? (() =>  {if (loader !== "A/Z") clear(); change('Von A bis Z', "A/Z")})()
-        : (() =>  {if (loader !== "Z/A") clear(); change('Von Z bis A', "Z/A")})()
 }

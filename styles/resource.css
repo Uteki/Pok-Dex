@@ -1,3 +1,8 @@
+#load:disabled {
+    opacity: 50% !important;
+    background-color:  #66a0d1 !important;
+}
+
 .icon {
     width: 22px;
 }
