@@ -44,6 +44,10 @@
 
 
 @media (max-width: 594px) {
+    main section {
+        min-height: calc(100vh - 386px);
+    }
+
     form {
         padding: 0 !important;
         & h2 {

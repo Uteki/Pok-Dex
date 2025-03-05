@@ -60,3 +60,15 @@ function onEnter(event) {
         document.getElementById("button-addon").click();
     }
 }
+
+function payloader() {
+    document.getElementById("load").disabled = true;
+
+    document.getElementById("loader").style.display = "flex";
+    document.getElementById("loader").classList.toggle("d_none");
+}
+
+function changeloader(a, b) {
+    change(a, b);
+    payloader();
+}

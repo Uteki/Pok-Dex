@@ -14,7 +14,7 @@ async function init() {
 
 async function fetchEm(url) {
     url = (url === undefined) ? (api + `?limit=${limit}`) : url;
-    if (loader !== "0/1") clear(); change('Kleinste Nummer', "0/1")
+    if (loader !== "0/1") clear(); changeloader('Kleinste Nummer', "0/1")
     try {
         let response = await fetch(url);
         let json = await response.json();
@@ -25,7 +25,7 @@ async function fetchEm(url) {
                 await pushEm(monster);
             }
         }
-    } catch (err) { console.error(err) } enabler("low");
+    } catch (err) { console.error(err) }enabler("low");
 }
 
 async function pushEm(monster) {
@@ -39,7 +39,7 @@ async function pushEm(monster) {
 }
 
 async function shuffleNext() {
-    if (loader !== "/") clear(); change('Zufallsgenerator', "/")
+    if (loader !== "/") clear(); changeloader('Zufallsgenerator', "/")
 
     for (let i = 0; i < limit; i++) {
         let response = await fetch( api + `/${Math.floor(Math.random() * max)}`);
@@ -51,7 +51,7 @@ async function shuffleNext() {
 }
 
 async function highNext() {
-    if (loader !== "1/0") clear(); change('Größte Nummer', "1/0")
+    if (loader !== "1/0") clear(); changeloader('Größte Nummer', "1/0")
 
     for (let i = 0; i < 12 && max > 0; i++, max--) {
         let response = await fetch(api + `/${max}`);
@@ -63,7 +63,7 @@ async function highNext() {
 }
 
 async function azNext(pending) {
-    checkLoad(pending);
+    checkLoad(pending); payloader()
 
     let response = await fetch(api + `?limit=${max}&offset=0`);
     let json = await response.json();
@@ -79,7 +79,7 @@ async function azNext(pending) {
 }
 
 async function search() {
-    clear(); change('Dexmon Suche', "search")
+    clear(); changeloader('Dexmon Suche', "search")
     const query = document.querySelector("input");
 
     let input = query.value;
@@ -123,10 +123,13 @@ function renderMonsters() {
 }
 
 function enabler(id) {
+    payloader();
+
     document.querySelectorAll("button").forEach(button => {
         button.disabled = false;
     });
     document.getElementById(`${id}`).disabled = true;
+
     renderMonsters();
 }
 

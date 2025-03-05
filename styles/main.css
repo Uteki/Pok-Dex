@@ -3,13 +3,11 @@ main {
 
     & section {
         background: #ffffff;
+        justify-content: space-between;
+        min-height: calc(100vh - 380px);
 
         & aside {
             margin: 40px 0;
-        }
-
-        & output {
-            min-height: calc(100vh - 620px);
         }
     }
 }
