@@ -14,6 +14,11 @@ main {
     }
 }
 
+#dropdownMenu2 span {
+    width: 118.53px !important;
+    display: inline-block;
+}
+
 .dropdown {
     & label {
         color: #919191;

@@ -10,6 +10,7 @@
 @import url(./styles/main.css);
 @import url(./styles/footer.css);
 
+@import url(./styles/motion.css);
 @import url(./styles/mobile.css);
 
-
+@import url(./styles/monster.css);

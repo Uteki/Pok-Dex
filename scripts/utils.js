@@ -13,6 +13,8 @@ function calcNr(num) {
 function errMsg(query){
     query.placeholder = "Bitte 3 Buchstaben";
     query.value = "";
+
+    enabler("load");
 }
 
 function isNumber(num){
@@ -50,4 +52,11 @@ function descending (a, b) {
         return 1;
     }
     return 0;
+}
+
+function onEnter(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("button-addon").click();
+    }
 }

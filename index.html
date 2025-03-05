@@ -36,9 +36,9 @@
                 <form role="search" aria-label="Dexmon-Suche" class="align-items-end col">
                     <h2>Name oder Nummer</h2>
                     <div class="input-group mb-3 col">
-                        <input name="cool" type="text" class="form-control" placeholder="Dexmon suchen" aria-label="Dexmon-Suche">
+                        <input name="cool" type="text" class="form-control" placeholder="Dexmon suchen" aria-label="Dexmon-Suche" onkeypress="onEnter(event)">
                         <div class="ms-3 input-group-next">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon"><img class="icon" src="assets/svg/m_glass.svg" alt="Lupe" onclick="search()"></button>
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon" onclick="search()"><img class="icon" src="assets/svg/m_glass.svg" alt="Lupe"></button>
                         </div>
                     </div>
                 </form>

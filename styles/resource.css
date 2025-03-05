@@ -10,3 +10,28 @@
 .main-icon {
     transform: translate(-3px, -1px);
 }
+
+.dropdown-toggle::after {
+    transition: transform 0.3s ease;
+}
+
+.dropdown-toggle.show::after {
+    transform: rotate(90deg);
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(#313131, #cfcfcf) !important;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar:horizontal {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff6f61;
+    border-radius: 20px;
+}

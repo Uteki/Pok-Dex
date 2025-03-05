@@ -11,6 +11,10 @@
         font-size: calc(1rem - 4px) !important;
     }
 
+    #dropdownMenu2 span {
+        width: 89.15px !important;
+    }
+
     .dropdown {
         & label {
             display: none;

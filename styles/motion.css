@@ -1,0 +1,6 @@
+@keyframes shake {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-2px); }
+    66% { transform: translateX(2px); }
+    100% { transform: translateX(0); }
+}

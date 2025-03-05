@@ -13,6 +13,10 @@ ul {
     padding: 0;
 }
 
+h3 {
+    margin: 0;
+}
+
 button {
     height: 40px;
 }

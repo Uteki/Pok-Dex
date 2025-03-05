@@ -15,7 +15,6 @@ async function init() {
 async function fetchEm(url) {
     url = (url === undefined) ? (api + `?limit=${limit}`) : url;
     if (loader !== "0/1") clear(); change('Kleinste Nummer', "0/1")
-
     try {
         let response = await fetch(url);
         let json = await response.json();

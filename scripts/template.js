@@ -1,12 +1,14 @@
 function monsterTemplate(id, name, image, types) {
     return `
-        <article style="background-color: red" onclick="test(${id})" id="${id}">
-            <img style="width: 20px" src=${image} alt="${name}">
-            <span>Nr. ${calcNr(id)}</span>
-            <h3>${name}</h3>
-            <ul>
-                ${types}
-            </ul>
+        <article onclick="test(${id})" id="${id}">
+            <img src=${image} alt="${name}">
+            <div>
+                <span>Nr. ${calcNr(id)}</span>
+                <h3>${String(name).charAt(0).toUpperCase() + String(name).slice(1)}</h3>
+                <ul>
+                    ${types}
+                </ul>
+            </div>
         </article>
     `
 }
