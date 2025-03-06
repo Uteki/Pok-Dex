@@ -21,15 +21,34 @@ function isNumber(num){
     return Number(num) === num;
 }
 
-function checkLoad(a) {
-    a === ascending
+function checkLoad(load) {
+    load === ascending
         ? (() =>  {if (loader !== "A/Z") clear(); change('Von A bis Z', "A/Z")})()
         : (() =>  {if (loader !== "Z/A") clear(); change('Von Z bis A', "Z/A")})()
 }
 
-function change(a, b) {
-    document.querySelector("#dropdownMenu2 span").innerText = `${a}`;
-    loader = b;
+function change(text, string) {
+    document.querySelector("#dropdownMenu2 span").innerText = `${text}`;
+    loader = string;
+}
+
+function changeloader(text, string) {
+    change(text, string);
+    payloader();
+}
+
+function payloader() {
+    document.getElementById("load").disabled = true;
+
+    document.getElementById("loader").style.display = "flex";
+    document.getElementById("loader").classList.toggle("d_none");
+}
+
+function onEnter(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("button-addon").click();
+    }
 }
 
 function ascending (a, b) {
@@ -52,23 +71,4 @@ function descending (a, b) {
         return 1;
     }
     return 0;
-}
-
-function onEnter(event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        document.getElementById("button-addon").click();
-    }
-}
-
-function payloader() {
-    document.getElementById("load").disabled = true;
-
-    document.getElementById("loader").style.display = "flex";
-    document.getElementById("loader").classList.toggle("d_none");
-}
-
-function changeloader(a, b) {
-    change(a, b);
-    payloader();
 }

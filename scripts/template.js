@@ -13,6 +13,13 @@ function monsterTemplate(id, name, image, types) {
     `
 }
 
+function dialogTemplate() {
+    return `
+    <div>
+    </div>
+    `
+}
+
 function catchMonster(json) {
     return {
         id: json.id,

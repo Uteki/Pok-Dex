@@ -25,7 +25,7 @@ async function fetchEm(url) {
                 await pushEm(monster);
             }
         }
-    } catch (err) { console.error(err) }enabler("low");
+    } catch (err) { console.error(err) } enabler("low");
 }
 
 async function pushEm(monster) {
@@ -82,7 +82,7 @@ async function search() {
     clear(); changeloader('Dexmon Suche', "search")
     const query = document.querySelector("input");
 
-    let input = query.value;
+    let input = query.value.toLowerCase();
     let integer = parseInt(input);
     if (input.length < 3 && !isNumber(integer)) {errMsg(query); return}
     if (isNaN(integer)) integer = input;
@@ -107,6 +107,17 @@ async function engine(integer, input) {
     }
 }
 
+function enabler(id) {
+    payloader();
+
+    document.querySelectorAll("button").forEach(button => {
+        button.disabled = false;
+    });
+    document.getElementById(`${id}`).disabled = true;
+
+    renderMonsters();
+}
+
 function renderMonsters() {
     for (let i = 0; i < monsters.length; i++) {
 
@@ -120,17 +131,6 @@ function renderMonsters() {
             monsters[i].id, monsters[i].name, monsters[i].image, types
         )
     }
-}
-
-function enabler(id) {
-    payloader();
-
-    document.querySelectorAll("button").forEach(button => {
-        button.disabled = false;
-    });
-    document.getElementById(`${id}`).disabled = true;
-
-    renderMonsters();
 }
 
 function loadNext() {
