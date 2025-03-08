@@ -60,21 +60,94 @@ article {
     }
 }
 
-.normal { background-color: #bfbfbf; color: white; }
-.fire { background-color: #ffac81; color: white; }
-.water { background-color: #81c6ff; color: white; }
-.electric { background-color: #ffe08a; color: black; }
-.grass { background-color: #a3e6a1; color: black; }
-.ice { background-color: #b3f1ff; color: black; }
-.fighting { background-color: #e68a83; color: white; }
-.poison { background-color: #caa6e0; color: white; }
-.ground { background-color: #e2c385; color: black; }
-.flying { background-color: #c5d1ff; color: black; }
-.psychic { background-color: #ff9aa2; color: white; }
-.bug { background-color: #c5e17a; color: black; }
-.rock { background-color: #d4c9a3; color: black; }
-.ghost { background-color: #a89cc8; color: white; }
-.dragon { background-color: #b3a1f7; color: white; }
-.dark { background-color: #928374; color: white; }
-.steel { background-color: #c8c8d0; color: black; }
-.fairy { background-color: #fbc3eb; color: black; }
+.normal { background-color: #bfbfbf !important; color: white; }
+.fire { background-color: #ffac81 !important; color: white; }
+.water { background-color: #81c6ff !important; color: white; }
+.electric { background-color: #ffe08a !important; color: black; }
+.grass { background-color: #a3e6a1 !important; color: black; }
+.ice { background-color: #b3f1ff !important; color: black; }
+.fighting { background-color: #e68a83 !important; color: white; }
+.poison { background-color: #caa6e0 !important; color: white; }
+.ground { background-color: #e2c385 !important; color: black; }
+.flying { background-color: #c5d1ff !important; color: black; }
+.psychic { background-color: #ff9aa2 !important; color: white; }
+.bug { background-color: #c5e17a !important; color: black; }
+.rock { background-color: #d4c9a3 !important; color: black; }
+.ghost { background-color: #a89cc8 !important; color: white; }
+.dragon { background-color: #b3a1f7 !important; color: white; }
+.dark { background-color: #928374 !important; color: white; }
+.steel { background-color: #c8c8d0 !important; color: black; }
+.fairy { background-color: #fbc3eb !important; color: black; }
+
+/*TODO: change styling*/
+#myModal {
+}
+
+#myModal[aria-hidden="true"] {
+    display: none !important;
+}
+
+.modal.show {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.modal-content {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+}
+
+.modal-header, .modal-footer {
+    border: none;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-footer {
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+}
+
+.modal-body {
+    color: black;
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    & .nav-link {
+        background: #f8f9fa;
+    }
+
+    & img {
+        width: 100%;
+        background-color: #f2f2f2;
+        border-radius: 15px;
+    }
+
+    & ul {
+        margin-top: 5px;
+
+        & li {
+            padding: 3px 8px;
+            font-weight: bold;
+            border-radius: 12px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+
+
+            &:first-child {
+                margin-right: 5px;
+            }
+
+            &::first-letter {
+                background-color: white;
+                padding: 1.6px 3.2px;
+                border-radius: 50%;
+                font-size: 12px;
+                line-height: 1;
+            }
+        }
+    }
+}

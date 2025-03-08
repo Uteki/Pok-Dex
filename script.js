@@ -34,7 +34,8 @@ async function pushEm(monster) {
         let response = await fetch(url);
         let json = await response.json();
 
-        return monsters.push(catchMonster(json));
+        let translation = await getTranslation(json.name);
+        return monsters.push(await catchMonster(json, translation));
     } catch (err) { console.error(err) }
 }
 
@@ -44,7 +45,8 @@ async function shuffleNext() {
     for (let i = 0; i < limit; i++) {
         let response = await fetch( api + `/${Math.floor(Math.random() * max)}`);
         let json = await response.json();
-        monsters.push(catchMonster(json));
+        let translation = await getTranslation(json.name);
+        monsters.push(await catchMonster(json, translation));
     }
 
     enabler("shuffle");
@@ -56,7 +58,8 @@ async function highNext() {
     for (let i = 0; i < 12 && max > 0; i++, max--) {
         let response = await fetch(api + `/${max}`);
         let json = await response.json();
-        monsters.push(catchMonster(json));
+        let translation = await getTranslation(json.name);
+        monsters.push(await catchMonster(json, translation));
     }
 
     enabler("high");
@@ -66,16 +69,15 @@ async function azNext(pending) {
     checkLoad(pending); payloader()
 
     let response = await fetch(api + `?limit=${max}&offset=0`);
-    let json = await response.json();
-    let pen = json.results.sort(pending);
+    let json = await response.json(); await translateName(json)
 
+    let pen = json.results.sort(pending);
     if (pen) {
         for (let i = offset; i < limit; i++) {
             await pushEm(pen[i]);
         }
     }
-    offset+=12;limit+=12;
-    enabler(next);
+    offset+=12;limit+=12;enabler(next);
 }
 
 async function search() {
@@ -98,12 +100,20 @@ async function engine(integer, input) {
     let json = await response.json();
 
     if (typeof integer === "string") {
-        let pen = json.results.filter(mon => mon.name.indexOf(integer) > -1);
+        await translateName(json);
+        let pen = json.results.filter(mon => mon.name.toLowerCase().indexOf(integer.toString()) > -1);
         for (let monster of pen) {
             await pushEm(monster);
         }
     } else {
         await pushEm(json.results[input -1]);
+    }
+}
+
+async function translateName(json) {
+    for (const monster of json.results) {
+        let gerVer =  await getTranslation(monster.name);
+        monster.name = gerVer[0];
     }
 }
 
