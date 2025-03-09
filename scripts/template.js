@@ -13,7 +13,7 @@ function monsterTemplate(id, name, image, types) {
     `
 }
 
-function dialogTemplate(name, id, image, description, types, color, weaknesses, stats, height, weight, cries, captureRate, species) {
+function dialogTemplate(name, id, image, description, types, color, weaknesses, stats, height, weight, cries, captureRate, species, evolution) {
     //TODO: order values, change divs
     return `
         <div class="modal-content ${color}">
@@ -82,7 +82,10 @@ function dialogTemplate(name, id, image, description, types, color, weaknesses, 
                             <source src="${cries}" type="audio/ogg">
                         </audio>
                     </div>
-
+                    
+                    <div>
+                        ${emAll(evolution)}
+                    </div>
                 </div>
             </div>
         
@@ -104,9 +107,24 @@ async function catchMonster(json, translation) {
         description: translation[1],
         species: translation[2],
         captureRate: translation[3],
+        evolution: translation[4],
         image: json.sprites.other["official-artwork"].front_default,
         types: json.types.map(typeInfo => typeInfo.type.name),
         weaknesses: await exploiter(json),
         cries: json.cries.latest
     };
+}
+
+function emAll(evolution) {
+    if (evolution.length === 3) {
+        //TODO: update html
+        return `<image class="w-25" src="${evolution[0][1]}" alt="${evolution[0][0]}"> < 
+                <image class="w-25" src="${evolution[1][1]}" alt="${evolution[1][0]}"> < 
+                <image class="w-25" src="${evolution[2][1]}" alt="${evolution[2][0]}">`
+    } else if (evolution.length === 2) {
+        return `<image class="w-25" src="${evolution[0][1]}" alt="${evolution[0][0]}"> < 
+                <image class="w-25" src="${evolution[1][1]}" alt="${evolution[1][0]}">`
+    } else {
+        return `<image class="w-25" src="${evolution[0][1]}" alt="${evolution[0][0]}">`
+    }
 }
