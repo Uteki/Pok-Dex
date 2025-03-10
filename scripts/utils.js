@@ -72,3 +72,28 @@ function descending (a, b) {
     }
     return 0;
 }
+
+function togInfo (id, num) {
+    let upId = document.getElementById(id);
+    if (upId.classList.contains("d-none")) {
+        togActive(num)
+        let upIds = document.querySelectorAll(".modal-body section");
+        upIds.forEach(ids => {
+            ids.classList.add("d-none");
+        })
+        upId.classList.remove("d-none");
+    }
+}
+
+function togActive (id) {
+    let selector = document.querySelectorAll("menu .nav-item");
+    selector.forEach(select => {
+        select.classList.remove("actor");
+    })
+    document.querySelector(`menu .nav-item:nth-child(${id})`).classList.add("actor");
+}
+
+function fillColor(type) {
+    const types = ["electric", "grass", "ice", "ground", "flying", "bug", "rock", "steel", "fairy"];
+    return types.includes(type.toLowerCase()) ? "black" : "white";
+}

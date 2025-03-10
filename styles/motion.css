@@ -5,6 +5,13 @@
     100% { transform: translateX(0); }
 }
 
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+    75% { transform: rotate(-5deg); }
+}
+
 #loader {
     justify-content: center;
     margin-top: 30px;
@@ -13,4 +20,8 @@
         border-radius: 50% !important;
         width: 50%;
     }
+}
+
+.arrow:hover svg {
+    animation: wiggle 0.3s ease-in-out;
 }

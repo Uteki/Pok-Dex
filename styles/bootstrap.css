@@ -23,3 +23,37 @@
         background-color: #616970 !important;
     }
 }
+
+.btn-info {
+    background-color: #8ce2f7;
+    color: #ffffff;
+    border: none;
+
+    &:hover {
+        background-color: #6bb7d4;
+        color: #ffffff;
+    }
+
+    &:active {
+        background-color: #3a7c99;
+        color: #ffffff !important;
+    }
+}
+
+.btn-dark {
+    background-color: #313131;
+}
+
+.progress {
+    margin: 3px 0;
+}
+
+.progress-stat {
+    font-size: 10.5px !important;
+    margin: 3px 15px 3px 0;
+}
+
+.actor {
+    background-color: #6bb7d4 !important;
+    color: #ffffff !important;
+}
