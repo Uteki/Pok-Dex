@@ -7,12 +7,16 @@
         font-size: calc(1.325rem + .9vw - 4px)
     }
 
-    .btn {
-        font-size: calc(1rem - 4px) !important;
-    }
-
     #dropdownMenu2 span {
         width: 89.15px !important;
+    }
+
+    #evolution {
+        padding-top: 10px;
+    }
+
+    .btn {
+        font-size: calc(1rem - 4px) !important;
     }
 
     .dropdown {
@@ -40,8 +44,38 @@
     .input-group input {
         font-size: calc(1rem - 4px) !important;
     }
-}
 
+    .modal-header {
+
+    }
+
+    .modal-body {
+        & h5 {
+            font-size: calc(1.25rem - 4px) !important;
+        }
+
+        & section {
+            min-height: 160px !important;
+            height: 160px;
+        }
+
+        & ul {
+            & li {
+                font-size: calc(1rem - 4px) !important;
+
+                &:first-letter {
+                    padding: 0.8px 2.4px !important;
+                }
+            }
+        }
+    }
+
+    .wrapper-desc {
+        & p {
+            font-size: calc(1rem - 4px) !important;
+        }
+    }
+}
 
 @media (max-width: 594px) {
     main section {
@@ -95,6 +129,26 @@
     }
 }
 
+@media (max-width: 463px) {
+    .wrapper-desc {
+        & p {
+            font-size: calc(1rem - 4px) !important;
+        }
+    }
+
+    .modal-body {
+        & menu {
+            margin: 15px 0 !important;
+        }
+
+        & figure {
+            figcaption {
+                font-size: 10px !important;
+            }
+        }
+    }
+}
+
 @media (max-width: 374px) {
     figcaption {
         font-size: 26px;
@@ -124,5 +178,17 @@
 
     #dropdownMenu2 {
         margin-top: 15px;
+    }
+
+    #evolution {
+        svg {
+            display: none;
+        }
+    }
+}
+
+@media (max-height: 678px) {
+    .modal.show {
+            display: block !important;
     }
 }

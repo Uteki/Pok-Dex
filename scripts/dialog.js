@@ -7,7 +7,6 @@ function monsterDialog(id, move) {
     monsters.some(monster => {
         if (monster.id === id) {
             document.querySelector(".modal-dialog").innerHTML += dialogTemplate(
-                //TODO: order values
                 monster.name, monster.id, monster.image, monster.description, elements(monster)[0], monster.types[0], elements(monster)[1], monster.stats,
                 monster.height, monster.weight, monster.cries, monster.captureRate, monster.species, monster.evolution
             )

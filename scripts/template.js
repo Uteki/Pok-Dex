@@ -14,7 +14,6 @@ function monsterTemplate(id, name, image, types) {
 }
 
 function dialogTemplate(name, id, image, description, types, color, weaknesses, stats, height, weight, cries, captureRate, species, evolution) {
-    //TODO: order values, change divs
     return `
         <div class="modal-content ${color}">
             <div class="modal-header">

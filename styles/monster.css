@@ -115,7 +115,7 @@ article {
             border-radius: 15px;
 
             & section {
-                min-height: 189px !important;
+                min-height: 189px;
 
                 &:nth-child(7) {
                     display: flex;

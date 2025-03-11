@@ -13,6 +13,7 @@
     <script src="./script.js"></script>
     <script src="./scripts/data.js"></script>
     <script src="./scripts/utils.js"></script>
+    <script src="./scripts/focus.js"></script>
     <script src="./scripts/dialog.js"></script>
     <script src="./scripts/redirect.js"></script>
     <script src="./scripts/template.js"></script>
@@ -62,8 +63,8 @@
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                         <button id="low" class="dropdown-item" type="button" onclick="fetchEm()">Kleinste Nummer</button>
                         <button id="high" class="dropdown-item" type="button" onclick="highNext()">Größte Nummer</button>
-                        <button id="ascending" class="dropdown-item" type="button" onclick="azNext(ascending)">Von A bis Z</button>
-                        <button id="descending" class="dropdown-item" type="button" onclick="azNext(descending)">Von Z bis A</button>
+                        <button id="ascending" class="dropdown-item" type="button" onclick="alphabeticNext(ascending)">Von A bis Z</button>
+                        <button id="descending" class="dropdown-item" type="button" onclick="alphabeticNext(descending)">Von Z bis A</button>
                     </div>
                 </div>
             </aside>
@@ -76,7 +77,7 @@
             <button id="load" class="btn btn-primary" onclick="loadNext()">Mehr Dexmon laden</button>
         </section>
 
-        <div class="modal fade" id="myModal" tabindex="-1" aria-hidden="true">
+        <div class="modal fade" id="myModal" tabindex="1" aria-hidden="true">
             <div class="modal-dialog">
                 <!--Pok-Dex-->
             </div>

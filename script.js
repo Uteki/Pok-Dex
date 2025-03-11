@@ -10,14 +10,14 @@ let loader = "0/1";
 async function init() {
     await fetchEm(api + `?limit=${limit}`);
     renderMonsters();
+    fixFocus();
 }
 
 async function fetchEm(url) {
     url = (url === undefined) ? (api + `?limit=${limit}`) : url;
     if (loader !== "0/1") clear(); changeloader('Kleinste Nummer', "0/1")
     try {
-        let response = await fetch(url);
-        let json = await response.json();
+        let json = await (await fetch(url)).json();
 
         if (json) {
             next = json.next;
@@ -31,8 +31,7 @@ async function fetchEm(url) {
 async function pushEm(monster) {
     try {
         let url = await monster.url;
-        let response = await fetch(url);
-        let json = await response.json();
+        let json = await (await fetch(url)).json();
 
         let translation = await getTranslation(json.name);
         return monsters.push(await catchMonster(json, translation));
@@ -65,10 +64,10 @@ async function highNext() {
     enabler("high");
 }
 
-async function azNext(pending) {
+async function alphabeticNext(pending) {
     checkLoad(pending); payloader()
 
-    let response = await fetch(api + `?limit=${max}&offset=0`);
+    let response = await fetch(api + `?limit=${135}&offset=0`);
     let json = await response.json(); await translateName(json)
 
     let pen = json.results.sort(pending);
@@ -90,13 +89,12 @@ async function search() {
     if (isNaN(integer)) integer = input;
 
     await engine(integer, input);
-
     query.value = ""; query.placeholder = "Dexmon suchen";
     enabler("load");
 }
 
 async function engine(integer, input) {
-    let response = await fetch(api + `?limit=${max}&offset=0`);
+    let response = await fetch(api + `?limit=${135}&offset=0`);
     let json = await response.json();
 
     if (typeof integer === "string") {
@@ -152,8 +150,8 @@ function loadNext() {
         case "/":
             return shuffleNext();
         case "A/Z":
-            return azNext(ascending);
+            return alphabeticNext(ascending);
         case "Z/A":
-            return azNext(descending);
+            return alphabeticNext(descending);
     }
 }
